@@ -9,15 +9,24 @@ public class ChristmasLetter {
     private String name;
     private String address;
     private List<String> wishList;
+    private final boolean nice;
 
     // constructor
     public ChristmasLetter(String name, String address, List<String> wishList) {
+        Random random = new Random();
+        nice = random.nextBoolean();
         this.name = name;
         this.address = address;
         this.wishList = wishList;
     }
 
     // getters, setters
+
+
+    public boolean isNice() {
+        return nice;
+    }
+
     public String getName() {
         return name;
     }
@@ -45,8 +54,7 @@ public class ChristmasLetter {
     // methods
 
     public String sendLetter(){
-        Random random = new Random();
-        boolean nice = random.nextBoolean();
+
         if(wishList.size() > 5){
             throw new RuntimeException("You added too many wishes!");
         }

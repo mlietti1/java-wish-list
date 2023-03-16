@@ -23,7 +23,7 @@ public class Main {
 
         System.out.print("What's your name? ");
         String name = scan.nextLine();
-        System.out.println("What's your address? ");
+        System.out.print("What's your address? ");
         String address = scan.nextLine();
 
         ChristmasLetter letter = new ChristmasLetter(name, address, wishList);
@@ -47,4 +47,5 @@ public class Main {
         scan.close();
 
     }
+
 }
