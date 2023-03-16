@@ -1,6 +1,9 @@
-package org.lessons.java.christmas;
+package org.lessons.java.bonus;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,10 +46,6 @@ public class Main {
         }catch (RuntimeException e){
             System.out.println(e.getMessage());
         }
-
-        System.out.println(letter.countWishes());
-
-        System.out.println(letter.uniqueWishes());
 
         scan.close();
 

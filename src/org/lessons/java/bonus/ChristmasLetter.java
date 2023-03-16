@@ -1,6 +1,7 @@
-package org.lessons.java.christmas;
+package org.lessons.java.bonus;
 
-import java.util.*;
+import java.util.List;
+import java.util.Random;
 
 public class ChristmasLetter {
 
@@ -61,18 +62,5 @@ public class ChristmasLetter {
             throw new RuntimeException("I'm sorry, I couldn't send your letter. Seems like you're on the naughty list. ");
         }
         return "Your letter has been successfully sent to the North Pole!";
-    }
-
-    public Map<String, Integer> countWishes(){
-        Map<String, Integer> count = new HashMap<>();
-        for(String item : wishList){
-            count.putIfAbsent(item, 0);
-            count.put(item, count.get(item) + 1);
-        }
-        return count;
-    }
-
-    public Set<String> uniqueWishes(){
-        return new HashSet<>(wishList);
     }
 }
