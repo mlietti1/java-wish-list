@@ -26,11 +26,11 @@ public class Main {
         System.out.print("What's your address? ");
         String address = scan.nextLine();
 
+        Collections.sort(wishList);
         ChristmasLetter letter = new ChristmasLetter(name, address, wishList);
 
         try{
             System.out.println(letter.sendLetter());
-            Collections.sort(wishList);
 
             System.out.println("Sender: " + name + "\n" + "Address: " + address + "\n" + "Wishlist: ");
 
